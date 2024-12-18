@@ -129,5 +129,16 @@
         items: 1
     });
 
+    // Update the footer with the current year
+    function updateFooterYear() {
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    }
+
+    // Call the function to update the year
+    updateFooterYear();
+
 })(jQuery);
 
