@@ -82,7 +82,7 @@ h6 {
     height: 100%;
     left: 0;
     top: 0;
-    background: url(../img/working_at_desk.png) left top repeat;
+    background: url(https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/working_at_desk.png) left top repeat;
     background-size: cover;
     filter: blur(8px);
     -webkit-filter: blur(8px);
@@ -956,7 +956,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ============================= */
 
 .testimonials {
-    background: url("../img/testimonial-bg.jpg") center top no-repeat fixed;
+    background: url("https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/testimonial-bg.jpg") center top no-repeat fixed;
     background-size: cover;
     padding: 40px 0 60px 0;
     text-align: center;
