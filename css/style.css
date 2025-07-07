@@ -787,7 +787,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-
 /* ============================= */
 /* ------- Portfolio CSS ------- */
 /* ============================= */
@@ -944,6 +943,30 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .portfolio-wrap-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.sorting {
+    float: right;
+    margin-bottom: 20px;
+}
+
+.exp-column {
+    min-height: 300px; /* or whatever size suits your layout */
+}
+
+.portfolio .portfolio-item figure img,
+.portfolio .portfolio-wrap-full figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;

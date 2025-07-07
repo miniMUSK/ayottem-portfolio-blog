@@ -108,16 +108,22 @@
 
 
     // Porfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('filter-active');
-        $(this).addClass('filter-active');
-
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+    $(document).ready(function () {
+        var $portfolioContainer = $('.portfolio-container');
+    
+        $portfolioContainer.isotope({
+            filter: '.web-dev', // Default filter to web development
+            itemSelector: '.portfolio-item',
+            layoutMode: 'fitRows'
+        });
+    
+        $('#portfolio-flters li').on('click', function () {
+            $('#portfolio-flters li').removeClass('filter-active');
+            $(this).addClass('filter-active');
+    
+            var filterValue = $(this).attr('data-filter');
+            $portfolioContainer.isotope({ filter: filterValue });
+        });
     });
 
 
@@ -139,6 +145,93 @@
 
     // Call the function to update the year
     updateFooterYear();
+
+    // Portfolio isotope, sorting, and pagination
+    var itemsPerPage = 9;
+    var allData = [];
+    var filteredData = [];
+    var currentSort = "dateAdded";
+
+    // Render portfolio items
+    function renderPage(page, dataArray) {
+        var start = (page - 1) * itemsPerPage;
+        var end = start + itemsPerPage;
+        var itemsToShow = dataArray.slice(start, end);
+        var $container = $('.portfolio-container');
+        $container.empty();
+
+        $.each(itemsToShow, function (index, item) {
+            var html =
+                '<div class="col-lg-4 col-md-6 portfolio-item ' + item.category + '">' +
+                    '<div class="portfolio-wrap">' +
+                        '<figure>' +
+                            '<img src="' + item.img + '" class="img-fluid" alt="">' +
+                            '<a href="' + item.previewLink + '" data-lightbox="portfolio" data-title="' + item.title + '" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>' +
+                            '<a href="' + item.detailsLink + '" class="link-details" title="More Details"><i class="fa fa-link"></i></a>' +
+                            '<h4 class="portfolio-title">' + item.title + ' <span>' + item.type + '</span></h4>' +
+                        '</figure>' +
+                    '</div>' +
+                '</div>';
+            $container.append(html);
+        });
+
+        $container.isotope('reloadItems').isotope({ sortBy: currentSort });
+    }
+
+    // Pagination controls
+    function renderPagination(dataArray) {
+        var totalPages = Math.ceil(dataArray.length / itemsPerPage);
+        var $pagination = $('.pagination');
+        $pagination.empty();
+
+        for (var i = 1; i <= totalPages; i++) {
+            $('<button class="page-btn">' + i + '</button>')
+                .on('click', function () {
+                    renderPage(parseInt($(this).text()), filteredData);
+                })
+                .appendTo($pagination);
+        }
+    }
+
+    // Sort data
+    function sortData(sortBy) {
+        currentSort = sortBy;
+        filteredData.sort(function (a, b) {
+            if (sortBy === "name") return a.title.localeCompare(b.title);
+            if (sortBy === "type") return a.type.localeCompare(b.type);
+            return new Date(b.dateAdded) - new Date(a.dateAdded);
+        });
+        renderPage(1, filteredData);
+    }
+
+    // Load data
+    $.getJSON('portfolio-data.json', function (data) {
+        allData = data;
+        filteredData = allData;
+        renderPage(1, filteredData);
+        renderPagination(filteredData);
+    });
+
+    // Category filtering
+    $('#portfolio-flters li').on('click', function () {
+        $('#portfolio-flters li').removeClass('filter-active');
+        $(this).addClass('filter-active');
+        var filterValue = $(this).attr('data-filter');
+        filteredData = (filterValue === '*') ? allData : allData.filter(item => item.category === filterValue.substring(1));
+        sortData(currentSort);
+        renderPagination(filteredData);
+    });
+
+    // Sorting option
+    $('#sort-options').on('change', function () {
+        sortData($(this).val());
+    });
+
+    // Initialize Isotope container
+    $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+    });
 
 })(jQuery);
 

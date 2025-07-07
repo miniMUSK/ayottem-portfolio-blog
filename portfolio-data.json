@@ -1,0 +1,93 @@
+[
+    {
+        "title": "Mega Lucario",
+        "type": "3D Printing",
+        "category": "3d-print",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/6e87bb49-0141-4b36-bcd4-c07803a83676-cropped.png",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/6e87bb49-0141-4b36-bcd4-c07803a83676.png",
+        "detailsLink": "https://www.thingiverse.com/thing:5764579",
+        "dateAdded": "2024-04-30"
+    },
+    {
+        "title": "Baby Groot",
+        "type": "3D Printing",
+        "category": "3d-print",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/20240228_013626-cropped.png",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/20240228_013626.png",
+        "detailsLink": "https://www.thingiverse.com/thing:2014307",
+        "dateAdded": "2024-04-30"
+    },
+    {
+        "title": "Ayotte Technologies",
+        "type": "Web Development",
+        "category": "web-dev",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/Ayotte.Tech-Screenshot.png",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/Ayotte.Tech-Screenshot.png",
+        "detailsLink": "https://ayotte.tech/",
+        "dateAdded": "2010-01-01"
+    },
+    {
+        "title": "Mansfield Collision Customs",
+        "type": "Web Development",
+        "category": "web-dev",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/Mansfield-Collision-Customs-Screenshot.png",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/Mansfield-Collision-Customs-Screenshot.png",
+        "detailsLink": "https://www.mansfieldcollisioncustoms.com/",
+        "dateAdded": "2024-07-15"
+    },
+    {
+        "title": "United Fantasy Sports League",
+        "type": "Web Development",
+        "category": "web-dev",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/UFSL-Screenshot.png",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/UFSL-Screenshot.png",
+        "detailsLink": "https://ufsl.ayotte.tech/",
+        "dateAdded": "2020-06-01"
+    },
+    {
+        "title": "Beaufords TLC Kennel",
+        "type": "Web Development",
+        "category": "web-dev",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/beaufords-TLC-kennel-screenshot.png",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/beaufords-TLC-kennel-screenshot.png",
+        "detailsLink": "https://calm-mud-093ed2b10.1.azurestaticapps.net/",
+        "dateAdded": "2025-07-01"
+    },
+    {
+        "title": "Ragnar",
+        "type": "Photography",
+        "category": "photo",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/ragnar.JPG",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/Ragnar.JPG",
+        "detailsLink": "https://www.ayotteindustries.com",
+        "dateAdded": "2023-12-02"
+    },
+    {
+        "title": "Ramona",
+        "type": "Photography",
+        "category": "photo",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/ramona.JPG",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/Ramona.JPG",
+        "detailsLink": "https://www.ayotteindustries.com",
+        "dateAdded": "2023-12-02"
+    },
+    {
+        "title": "Berlin, Connecticut",
+        "type": "Drone Technologies",
+        "category": "drone-tech",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/DJI_0144.JPG",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/DJI_0144.JPG",
+        "detailsLink": "https://ayotte.tech/contact.html",
+        "dateAdded": "2023-07-07"
+    },
+    {
+        "title": "Puxico, Missouri",
+        "type": "Drone Technologies",
+        "category": "drone-tech",
+        "img": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/DJI_0189.JPG",
+        "previewLink": "https://ayotek.blob.core.windows.net/ayottem-portfolio-blog/media/img/DJI_0189.JPG",
+        "detailsLink": "https://ayotte.tech/contact.html",
+        "dateAdded": "2024-04-08"
+    }
+]
+
